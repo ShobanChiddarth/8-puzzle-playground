@@ -1,38 +1,54 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    text-align: center;
+    padding: 20px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .controls {
+    margin-bottom: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .controls input {
+    width: 50px;
+    margin-right: 10px;
   }
-}
+  
+  .grid {
+    display: inline-block;
+  }
+  
+  .grid-row {
+    display: flex;
+  }
+  
+  .grid-cell {
+    width: 80px; /* Increased size for larger grid */
+    height: 80px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .grid-cell.blank {
+    background-color: #ccc;
+    cursor: default;
+  }
+  
+  .cell-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .edit-button {
+    margin-top: 5px;
+    font-size: 12px;
+    padding: 2px 5px;
+    cursor: pointer;
+  }
