@@ -8,6 +8,7 @@ function App() {
 
   useEffect(() => {
     generateGrid(rows, cols);
+    document.title = "8-puzzle playground";
   }, [rows, cols]);
 
   const generateGrid = (n, m) => {
